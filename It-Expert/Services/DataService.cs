@@ -1,7 +1,7 @@
 ﻿using It_Expert.DataBase;
 using It_Expert.DataBase.Entities;
+using It_Expert.Domain;
 using It_Expert.Domain.Dtos;
-using It_Expert.Domain.Requests;
 using It_Expert.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 

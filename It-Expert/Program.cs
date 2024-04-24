@@ -14,6 +14,8 @@ builder.Services.AddLogging(builder => {
     builder.AddConsole().SetMinimumLevel(LogLevel.Debug);
 });
 
+builder.Services.AddCors(p => p.AddPolicy("allowAny", builder => builder.WithOrigins("localhost").AllowAnyOrigin().AllowAnyHeader()));
+
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -39,6 +41,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors("allowAny");
 
 app.UseHttpsRedirection();
 

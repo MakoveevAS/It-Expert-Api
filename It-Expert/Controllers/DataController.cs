@@ -1,5 +1,5 @@
-﻿using It_Expert.Domain.Dtos;
-using It_Expert.Domain.Requests;
+﻿using It_Expert.Domain;
+using It_Expert.Domain.Dtos;
 using It_Expert.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -25,7 +25,6 @@ public class DataController : ControllerBase
     [HttpGet(Name = "Data")]
     [SwaggerOperation(Summary = "request data from db")]
     [ProducesResponseType(StatusCodes.Status200OK)]
-    [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(typeof(ObjectResult), StatusCodes.Status500InternalServerError)]
     [SwaggerResponse((int)HttpStatusCode.OK, Type = typeof(DataDto[]))]
     public async Task<IActionResult> Get(int? code, string? value)
@@ -37,6 +36,7 @@ public class DataController : ControllerBase
     [HttpPost(Name = "Data")]
     [SwaggerOperation(Summary = "save data into db")]
     [ProducesResponseType(200)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(typeof(ObjectResult), StatusCodes.Status500InternalServerError)]
     public async Task<IActionResult> Post([FromBody] PostRequest dataRequest)
     {

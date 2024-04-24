@@ -1,6 +1,6 @@
 ﻿using It_Expert.Domain.Dtos;
 
-namespace It_Expert.Domain.Requests;
+namespace It_Expert.Domain;
 
 public class PostRequest
 {

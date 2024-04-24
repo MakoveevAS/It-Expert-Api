@@ -1,5 +1,5 @@
-﻿using It_Expert.Domain.Dtos;
-using It_Expert.Domain.Requests;
+﻿using It_Expert.Domain;
+using It_Expert.Domain.Dtos;
 
 namespace It_Expert.Services.Interfaces;
 

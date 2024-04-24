@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using It_Expert.Domain.Requests;
+using It_Expert.Domain;
 
 namespace It_Expert.Validators;
 
